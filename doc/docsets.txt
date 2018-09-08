@@ -1,0 +1,102 @@
+docsets.txt*    Search docment from docsets
+
+Author:         DaSea(dhf0214@126.com)
+Licence:        MIT licence
+Version:        0.1.0
+
+==============================================================================
+Contents                                       *docsets*  *docsets-contents*
+
+         1. Intro ........................... |docsets-intro|
+         2. Requirements .................... |docsets-requirements|
+         3. Usage ........................... |docsets-usage|
+              Commands ...................... |docsets-commands|
+              Key mappings .................. |docsets-mappings|
+         4. Configuration ................... |docsets-configuration|
+              Highlight colours ............. |docsets-highlighting|
+         5. Functions ....................... |docsets-functions|
+         6. Troubleshooting & Known issues .. |docsets-issues|
+         7. History ......................... |docsets-history|
+
+==============================================================================
+1. Intro                                                     *docsets-intro*
+
+Search document from docsets.
+
+==============================================================================
+2. Requirements                                       *docsets-requirements*
+
+The following requirements have to be met in order to be able to use
+docsets.vim:
+
+  - Vim 8.0 or higher or neovim
+  - Python3
+
+==============================================================================
+3. Usage                                                     *docsets-usage*
+
+Create new project file ~
+
+Open a window to list your percently project, open the Vim. Type
+|:EXPrjCommonDirList| , select one item, and enter to open it!
+
+------------------------------------------------------------------------------
+COMMANDS                                                  *docsets-commands*
+
+:DocsetsSearch type content
+    search the usage function , macro or other; need two param, type and
+    search content, example:
+    :DocsetsSearch c malloc
+
+:LeaderfDocsets type
+    List the available content for search with the specified type, this
+    command depend on LeaderF plugin, example:
+    :LeaderfDocsets c
+
+------------------------------------------------------------------------------
+KEY MAPPINGS                                              *docsets-mappings*
+
+Default key mappings:
+
+==============================================================================
+4. Configuration                                     *docsets-configuration*
+
+                                                           *g:docsets_path_root*
+g:docsets_path_root~
+Default: ''
+
+The root path of docsets, you can set:
+    let g:docsets_path_root = "/media/entertainment/Doc/docsets"
+
+The docsets you can download from 'https://kapeli.com/dash', my docsets tree
+is:
+/media/entertainment/Doc/docsets/
+    |
+    |-C++.docset
+    |
+    |-C.docset
+    |
+    |-Python_3.docset
+    |
+    |-Bash.docset
+
+                                                           *g:docsets_filetype_map*
+g:docsets_filetype_map~
+Default: {"cpp":"C++.docset", "c":"C.docset", "python":"Python_3.docset",
+    \ "bash":"Bash.docset", "go":"Go.docset"}
+
+------------------------------------------------------------------------------
+HIGHLIGHT COLOURS                                     *docsets-highlighting*
+TODO
+==============================================================================
+5. Functions                                             *docsets-functions*
+
+==============================================================================
+6. Troubleshooting & Known issues                           *docsets-issues*
+
+
+==============================================================================
+7. History                                                 *docsets-history*
+
+==============================================================================
+ vim: tw=78 ts=8 sw=4 sts=4 et ft=help
